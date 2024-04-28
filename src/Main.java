@@ -32,48 +32,52 @@ public class Main {
         }
         if (humanAge >= 18 && humanAge <= 24) {
             System.out.println("Если возраст человека равен " + humanAge + " ,то ему нужно ходить в университет");
-        } else {
+        }
+        if (humanAge > 24) {
             System.out.println("Если возраст человека равен " + humanAge + " , то ему нужно ходить на работу");
         }
 
         int childAge = 14;
-        boolean adult = false;
-        if (childAge < 5){
+        boolean adult = true;
+        if (childAge < 5) {
             System.out.println("Если ребенку " + childAge + " лет, то он не может кататься на аттракционе");
         }
-        if (childAge >= 5 && childAge <= 14 && adult == false){
+        if (childAge >= 5 && childAge <= 14 && adult == false) {
             System.out.println("Если ребенку " + childAge + " лет, то он не может кататься на аттракционе без сопровождения взрослых");
         }
-        if (childAge > 14){
+        if (childAge >= 5 && childAge <= 14 && adult == true) {
+            System.out.println("Если ребенку " + childAge + " лет, то он может кататься на аттракционе с сопровождением взрослых");
+        }
+        if (childAge > 14) {
             System.out.println("Если ребенку" + childAge + " лет, то он может кататься на аттракционе без сопровождения взрослых");
         }
 
 
         byte vanCapacity = 102;
         byte sittingPlace = 60;
-        int standingPlace = vanCapacity - sittingPlace;
-        int currentPassengers = 43;
-        if (currentPassengers > 60 && currentPassengers < 102){
-            System.out.println("Сейчас в вагоне доступно " +  (vanCapacity - currentPassengers) + " стоячих мест");
-        }
-        if (currentPassengers <= 60){
-            System.out.println("Сейчас в вагоне доступно " + (vanCapacity - currentPassengers) + " мест, из которых " + ( sittingPlace -currentPassengers) + " сидячих мест, и " + standingPlace + " стоячих мест");
-        }
-        else {
-            System.out.println("Вагон полностью заполнен");
+        int place = 61;
+        if (place > vanCapacity) {
+            System.out.println("Вагон заполнен");
+        } else {
+            if (place > sittingPlace) {
+                System.out.println("Есть стоячее место");
+            } else {
+                System.out.println("Есть сидячее место");
+            }
         }
 
         int one = 6;
-        int two = 2;
-        int three = 5;
-        if (one > two && two < three || three < two){
-            System.out.println("Большее число - " + one);
-        }
-        if ( two > one && one < three   ){
-            System.out.println("Большее число - " + two);
-        }
-        else if ( three > one && one < two) {
-            System.out.println("Большее число - " + three);
+        int two = 55;
+        int three = 55;
+        if (one > two && one > three) {
+            System.out.println(one);
+        } else {
+            if (two > three) {
+                System.out.println(two);
+            } else {
+                System.out.println(three);
+
+            }
         }
     }
 }
