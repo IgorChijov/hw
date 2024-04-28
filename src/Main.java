@@ -44,7 +44,7 @@ public class Main {
 
 
 
-        int monthNumber = 2;
+        int monthNumber = 6;
         switch (monthNumber) {
             case 12,1,2 -> System.out.println("Зима");
             case 3,4,5 -> System.out.println("Весна");
