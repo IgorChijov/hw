@@ -1,15 +1,50 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int clientOS = 1;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
 
-        for (int i = 2  ; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int clientDeviceYear = 2015;
+        if (clientOS == 0 && clientDeviceYear <2015) {
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        }
+
+        int year = 1900;
+        if (year > 1584) {
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                System.out.println("Год является високосным");
+            } else {
+                System.out.println("Год не является високосным");
+            }
+        }
+
+        int deliveryDistance = 65;
+        int deliveryTime = 1;
+        if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
+        } else{
+            if (deliveryDistance > 20) {
+                deliveryDistance++;
+            }
+            if (deliveryDistance > 60) {
+                deliveryDistance++;
+            }
+            System.out.println("Потребуется дней " + deliveryDistance);
+        }
+
+
+
+
+        int monthNumber = 2;
+        switch (monthNumber) {
+            case 12,1,2 -> System.out.println("Зима");
+            case 3,4,5 -> System.out.println("Весна");
+            case 6,7,8 ->System.out.println("Лето");
+            case 9,10,11 -> System.out.println("Осень");
+            default -> System.out.println("Номер месяца больше 12..");
         }
     }
 }
