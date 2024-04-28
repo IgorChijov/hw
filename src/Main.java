@@ -12,7 +12,7 @@ public class Main {
             System.out.println("Установите версию приложения для IOS по ссылке");
         }
 
-        int year = 1900;
+        int year = 1901;
         if (year > 1584) {
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
                 System.out.println("Год является високосным");
@@ -45,6 +45,7 @@ public class Main {
             case 6,7,8 ->System.out.println("Лето");
             case 9,10,11 -> System.out.println("Осень");
             default -> System.out.println("Номер месяца больше 12..");
+
         }
     }
 }
